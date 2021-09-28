@@ -13,13 +13,13 @@ public class Exercicio04 {
         System.out.println("Quantidade de quilowatts gasto: ");
         quilowatt = entrada.nextDouble();
 
-        valorQuilo = (1/500) * salario;
+        valorQuilo = salario/500;
         valorReais = valorQuilo * quilowatt;
         valorDesconto = valorReais * 0.85;
 
-        System.out.println("Valor quilowatts:" + valorQuilo);
-        System.out.println("Valor em Reais:" + valorReais);
-        System.out.println("Valor com desconto:" + valorDesconto);
+        System.out.printf("Valor de cada Quilowatts: R$ %.2f\n", valorQuilo);
+        System.out.printf("Valor em Reais: R$ %.2f\n", valorReais);
+        System.out.printf("Valor com desconto: R$ %.2f\n", valorDesconto);
 
         entrada.close();
     }
