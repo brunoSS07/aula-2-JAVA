@@ -2,9 +2,7 @@ package exemplos;
 
 import java.util.Scanner;
 
-/**
- * Exemplo01
- */
+
 public class Exemplo01 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
