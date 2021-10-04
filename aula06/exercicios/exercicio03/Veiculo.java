@@ -17,11 +17,14 @@ public class Veiculo {
     }
 
     public double consumoCarro(){
-
-       return consumo;
+        return consumo;
     }
 
-    public void alterarConsumo(double novoConsumo){
+    public double getConsumo(){
+        return consumo;
+    }
+
+    public void setConsumo(double novoConsumo){
         if(novoConsumo > 0){
         consumo = novoConsumo;
         }
