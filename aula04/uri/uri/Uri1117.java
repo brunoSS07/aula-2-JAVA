@@ -20,6 +20,7 @@ public class Uri1117 {
                 notaValida = true;
             }
         }
+        
         notaValida = false;
         while(notaValida == false){
             nota2 = entrada.nextDouble();
