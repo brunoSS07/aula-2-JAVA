@@ -7,6 +7,15 @@ public class AppRelogio {
     System.out.println("Hora atual é: " + rel.getHora());
 
     rel.setHora(-70);
-    System.out.println("Hora atual é: " + rel.getHora());
+    System.out.println("Hora: " + rel.getHora());
+
+    rel.setMinuto(-8);
+    System.out.println("Minuto: "+ rel.getMinuto());
+
+    rel.setSegundo(9);
+    System.out.println("Segundo: "+ rel.getSegundo());
+
+    rel.exibir();
+    System.out.println(rel.horaAtual()); 
     }
 }
