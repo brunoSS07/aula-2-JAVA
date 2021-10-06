@@ -23,6 +23,7 @@ public class Gerente extends Funcionario{
     @Override
     public void aumentaSalario(double porcentagem){
        super.aumentaSalario(porcentagem + 20);
+       
     }
 
    /* @Override

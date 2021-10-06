@@ -16,10 +16,6 @@ public class Veiculo {
         System.out.println("Marca do carro é: "+ marca);
     }
 
-    public double consumoCarro(){
-        return consumo;
-    }
-
     public double getConsumo(){
         return consumo;
     }
