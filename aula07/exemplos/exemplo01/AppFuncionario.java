@@ -13,7 +13,8 @@ public class AppFuncionario {
         ger.aumentaSalario(20);
         ger.exibir();
         ger2.exibir();
-
+        
+        //Puxo o metodo toString
         System.out.println(fun);
         System.out.println(ger);
 

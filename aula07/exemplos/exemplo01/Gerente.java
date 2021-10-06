@@ -3,10 +3,10 @@ package exemplos.exemplo01;
 public class Gerente extends Funcionario{
     private int numFuncionarios;
 
-    public Gerente(String nome, double salario, int numfuncionmarios){
+    public Gerente(String nome, double salario, int numFuncionarios){
         //super chama o ciosntrutor da superclasse
         super(nome, salario);
-        this.numFuncionarios = numfuncionmarios;
+        this.numFuncionarios = numFuncionarios;
     }
 
     public Gerente(String nome){
@@ -27,7 +27,6 @@ public class Gerente extends Funcionario{
 
    /* @Override
     public String toString(){
-        
         return super.getNome() + ": R$ "+ super.getSalario() + "\nNumero de funcionários: "+ numFuncionarios;
     }*/
     @Override
