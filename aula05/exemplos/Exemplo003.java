@@ -5,8 +5,8 @@ public class Exemplo003 {
         Scanner entrada = new Scanner(System.in);
         int [] numeros = new int[5];
 
-        for(int i=0; i <5; i++){
-            System.out.printf("Posicao %d recebeu o numero %d\n",i, numeros[i]);
+        for(int i=0; i < numeros.length; i++){
+            System.out.printf("Posicao %dº recebeu o numero %d\n",i+1, numeros[i]);
             numeros[i] = entrada.nextInt();
         }
 

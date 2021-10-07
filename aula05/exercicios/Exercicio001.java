@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercicio001 {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int num, maior, menor, pos;
 
@@ -12,9 +12,9 @@ public class Exercicio001 {
 
         System.out.println("Digite 10 numeros");
         System.out.println("=================");
-        for (pos = 1; pos < 11; pos++) {
+        for (pos = 1; pos <= 10; pos++) {
             System.out.printf("Digite o %dº numero: ", pos);
-            num = teclado.nextInt();
+            num = scan.nextInt();
             if (num > maior) {
                 maior = num;
             }
@@ -25,6 +25,6 @@ public class Exercicio001 {
         System.out.println("O maior numero é: " + maior);
         System.out.println("O menor numero é: " + menor);
 
-        teclado.close();
+        scan.close();
     }
 }
