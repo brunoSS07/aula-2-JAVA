@@ -3,6 +3,11 @@ package exemplos;
 import java.util.ArrayList;
 
 public class Exemplo02 {
+    
+    //public boolean ativar(int p){
+    //    return p > 1;
+    //}
+
     public static void main(String[] args) {
         ArrayList<Integer> lista = new ArrayList<>();
 
@@ -16,5 +21,10 @@ public class Exemplo02 {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
         }
+
+       //Exemplo02 e = new Exemplo02();
+
+       //System.out.println(e.ativar( 1));
+        
     }
 }
