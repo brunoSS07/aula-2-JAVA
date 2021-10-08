@@ -29,21 +29,32 @@ public class GerenciaContas {
    
 
     public boolean depositar(int numeroConta, double valor){
+        // procura a conta para realizar o depósito
         for(Conta conta : contas){
-            if(conta.getNumero() == numeroConta){
+            if(conta.getNumero() == numeroConta){ // achou a conta
                 return conta.depositar(valor);
             }
         }
-        return false;
+        return false; // conta não encontrada
     }
 
     public boolean sacar(int numeroConta, double valor){
         for(Conta conta : contas){
-            if(conta.getNumero() == numeroConta){
+            if(conta.getNumero() == numeroConta){ // achou a conta
                 return conta.sacar(valor);
             }
         }
-        return false;
+        return false; // conta não encontrada
+    }
+
+    public String saldo(int numeroConta) {
+        for (Conta conta : contas) {
+            if(conta.getNumero() == numeroConta) {
+                // return conta.toString();
+                return "" + conta;
+            }
+        }
+        return "Conta não encontrada.";
     }
 
 }

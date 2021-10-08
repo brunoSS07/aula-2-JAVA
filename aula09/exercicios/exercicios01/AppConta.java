@@ -3,9 +3,7 @@ package exercicios.exercicios01;
 import java.util.Scanner;
 
 import exercicios.exercicios01.dao.GerenciaContas;
-import exercicios.exercicios01.dominio.ContaCorrente;
-import exercicios.exercicios01.dominio.ContaEspecial;
-import exercicios.exercicios01.dominio.ContaPoupanca;
+
 
 public class AppConta {
     public static void main(String[] args) {
@@ -13,9 +11,6 @@ public class AppConta {
         int opcao;
         int numeroConta;
         double limite, valor;
-        ContaCorrente cc = null;
-        ContaEspecial ce = null;
-        ContaPoupanca cp = null;
 
         GerenciaContas contas =  new GerenciaContas();
 
@@ -31,49 +26,55 @@ public class AppConta {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Digite o numero da conta: ");
+                    System.out.println("Digite o número da conta:");
                     numeroConta = entrada.nextInt();
                     contas.novaContaCorrente(numeroConta);
                     break;
 
                 case 2:
-                    System.out.println("Digite o numero da conta: ");
+                    System.out.println("Digite o número da conta:");
                     numeroConta = entrada.nextInt();
-                    System.out.println("Informe o valor do limite: ");
+                    System.out.println("Informe o valor do limite:");
                     limite = entrada.nextDouble();
                     contas.novaContaEspecial(numeroConta, limite);
                     break;
 
                 case 3:
-                    System.out.println("digite o numero da conta: ");
+                    System.out.println("Digite o número da conta:");
                     numeroConta = entrada.nextInt();
                     contas.novaContaPoupanca(numeroConta);
                     break;
 
                 case 4:
-                System.out.println("Informe o valor do depósito: ");
-                valor = entrada.nextDouble();
-                //Se o depositar der true deposito realizado
-                if(cc.depositar(valor)){
-                    System.out.println("Depósito realizado");
-                }else{
-                    System.out.println("Falha ao realizar depósito.");
-                }
+                    System.out.println("Digite o número da conta:");
+                    numeroConta = entrada.nextInt();
+                    System.out.println("Informe o valor do depósito:");
+                    valor = entrada.nextDouble();
+
+                    if (contas.depositar(numeroConta, valor)) {
+                        System.out.println("Depósito realizado.");
+                    } else {
+                        System.out.println("Falha ao realizar o depósito.");
+                    }
                     break;
 
                 case 5:
-                System.out.println("Digite o valor de saque: ");
-                valor = entrada.nextDouble();
-                if(cc.sacar(valor)){
-                    System.out.println("Saque realizado.");
-                }else{
-                    System.out.println("Problema ao sacar.");
-                }
+                    System.out.println("Digite o número da conta:");
+                    numeroConta = entrada.nextInt();
+                    System.out.println("Informe o valor do saque:");
+                    valor = entrada.nextDouble();
+
+                    if (contas.sacar(numeroConta, valor)) {
+                        System.out.println("Saque realizado.");
+                    } else {
+                        System.out.println("Falha ao realizar o saque.");
+                    }
                     break;
 
                 case 6:
-                System.out.println(cc);
-                // System.out.println(ce);
+                    System.out.println("Digite o número da conta:");
+                    numeroConta = entrada.nextInt();
+                    System.out.println(contas.saldo(numeroConta));
                     break;
 
                 case 7:
