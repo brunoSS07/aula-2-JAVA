@@ -1,7 +1,7 @@
 package exercicios.exercicios01.dominio;
 
 public class ContaCorrente extends Conta{
-    final double TAXA_DEPOSITO = 0.10;
+    final double TAXA_DEPOSITO = 0.10; //Constante
 
     public ContaCorrente(int numero){
         super(numero);

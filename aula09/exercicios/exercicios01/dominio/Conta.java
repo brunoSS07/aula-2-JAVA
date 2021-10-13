@@ -4,16 +4,17 @@ public abstract class Conta {
     private int numero;
     private double saldo;
 
+    // Metodo CONSTRUTOR
     public Conta(int numero){
         this.numero = numero;
         this.saldo = 0;
     }
-
+    // Metodo CONSTRUTOR
     public Conta(int numero, double saldo){
         this.numero = numero;
         this.saldo = saldo;
     }
-
+    
     public int getNumero(){
         return numero;
     }
