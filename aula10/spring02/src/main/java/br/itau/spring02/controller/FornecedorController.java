@@ -67,8 +67,12 @@ public class FornecedorController {
         if(fornecedorEncontrado == null ){  // fornecedor nao encontrado no BD
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
+        try{
         repo.deleteById(codigo);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build(); // ok mas sem conteudo no corpo
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build(); // ok mas sem conteudo no corpo
+        }catch(Exception ex){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
 
     }
 
