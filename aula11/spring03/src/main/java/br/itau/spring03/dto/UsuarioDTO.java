@@ -6,7 +6,7 @@ import br.itau.spring03.model.Usuario;
 public class UsuarioDTO {
     private String nome;
     private String email;
-    private String login;
+    private String login = "não logado";
 
     public UsuarioDTO (Usuario user){
         this.nome = user.getNome();

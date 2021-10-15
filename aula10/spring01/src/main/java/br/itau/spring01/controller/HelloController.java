@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController //indica que essa classe é um controller REST
-@CrossOrigin("*") //aceita requisicoes de outros dominios
+@CrossOrigin("*") //aceita requisicoes de outros dominios - pode vir de outros varios servidores
 @RequestMapping("/hello")//nome do recurso
 public class HelloController {
     

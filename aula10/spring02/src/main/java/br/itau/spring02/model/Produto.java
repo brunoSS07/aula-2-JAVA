@@ -11,16 +11,18 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity //diz que essa classe vai ser armazenada no BD
-@Table(name = "tb_produto")
+@Entity //diz que essa classe vai ser armazenada no BD, pois nem todas pode ser armazenadas no BD
+@Table(name = "tb_produto") ///JPA sabe qual a tabela no banco que corresponde a essa CLASSE
 public class Produto {
 
     @Id //indica que é a chave primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment 1, 2, 3...
     @Column(name = "cod")
     private long codigo;
-    @Column(name = "nome", length = 200, nullable = false )
+
+    @Column(name = "nome", length = 200, nullable = false )//nullable é o NOT NULL
     private String nome;
+
     @Column(name = "valor")
     private double valor;
 

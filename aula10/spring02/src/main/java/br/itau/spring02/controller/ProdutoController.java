@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 import br.itau.spring02.model.Produto;
 import br.itau.spring02.repository.ProdutoRepo;
 
-@RestController
-@CrossOrigin("*")
-@RequestMapping("/produto")
+@RestController //indica que essa classe é um controller REST
+@CrossOrigin("*") //aceita requisicoes de outros dominios - pode vir de outros varios servidores
+@RequestMapping("/produto") //nome do recurso
 public class ProdutoController {
 
-    @Autowired //implememta a interface, os metodos e disponibiliza o objeto para
-    private ProdutoRepo repo;
+    @Autowired //implememta a interface, os metodos e disponibiliza para o objeto
+    private ProdutoRepo repo; 
     
-    @GetMapping("/{codigo}")
-    public ResponseEntity<Produto> buscarProduto(@PathVariable long codigo){
+    @GetMapping("/{codigo}")//aciono o metodo --> Esse codigo vai ser trasmitido para o parametro do metodo
+    public ResponseEntity<Produto> buscarProduto(@PathVariable long codigo){ //uso ResponseEntity pois alem de devolver dados quero devolver codigos http
       Produto produto = repo.findById(codigo).orElse(null);
 
       if(produto != null){ // achou o produto
